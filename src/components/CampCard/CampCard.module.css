@@ -1,0 +1,193 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover { box-shadow: var(--shadow-md); }
+
+/* Image */
+.imageWrap {
+  position: relative;
+  height: 176px;
+  background: var(--bg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.card:hover .image { transform: scale(1.04); }
+
+.badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.tagBadge {
+  background: rgba(255,255,255,0.9);
+  color: var(--text-secondary);
+}
+
+/* Activity colors */
+.activityStem     { background: #dbeafe; color: #1d4ed8; }
+.activitySports   { background: #dcfce7; color: #15803d; }
+.activityArt      { background: #f3e8ff; color: #7e22ce; }
+.activityMusic    { background: #fef9c3; color: #854d0e; }
+.activityOutdoors { background: #d1fae5; color: #065f46; }
+.activityAcademic { background: #f1f5f9; color: #475569; }
+.activityCooking  { background: #ffedd5; color: #9a3412; }
+.activityDefault  { background: var(--forest-muted); color: var(--forest); }
+
+.closedBanner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(30,41,59,0.72);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 5px 0;
+}
+
+/* Body */
+.body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.price {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--forest);
+  flex-shrink: 0;
+}
+
+.host {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  margin-bottom: 10px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.metaFull { grid-column: 1 / -1; }
+.metaIcon { line-height: 1.3; flex-shrink: 0; }
+
+.extendedCare {
+  color: var(--forest);
+  font-weight: 500;
+}
+
+.openBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--green-text);
+  background: var(--green-bg);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 6px;
+}
+
+.popularity {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.viewBtn {
+  flex: 1;
+  background: var(--forest);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 9px 0;
+  border-radius: var(--radius-md);
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.viewBtn:hover { background: var(--forest-light); }
+
+.sourceLink {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  white-space: nowrap;
+  transition: border-color 0.15s, color 0.15s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sourceLink:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
